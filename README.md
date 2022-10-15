@@ -1,4 +1,4 @@
-# Home Environment
+# Data Development Environments
 This project is filled with scripts that I use to setup my home environment. We will do our best to organize these scripts for installing the applications that I use when taking on a new machine.
 
 ## Method of the Madness
