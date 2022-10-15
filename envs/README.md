@@ -11,7 +11,8 @@ Each environment will have a folder to itself. Every environment will have a REA
 | Kafka            | Kafka environment is for message brokering. This should be used when building a streaming messaging platform       | TBD  |
 | Spark            | Spark environment is for processing batch or streaming data. This environment will include a spark master and spark workers. It should also include a notebook system that is connected to it as well | TBD|
 | Jenkins          | Jenkins environment for automating deployment of environments | TBD |
-| Terraform        | 
+| Terraform        | Infrastructure as code solution for building environments | TBD |
+| Airflow | Apache solution for building execution and orchestration pipelines | TBD |
 
 ## How to submit updates or changes
 
