@@ -8,10 +8,11 @@ Each environment will have a folder to itself. Every environment will have a REA
 
 | Environment Name | Description | Link |
 |------------------|-------------|------|
+| Jenkins          | Jenkins environment for automating deployment of environments | [Link](./jenkins/README.md) |
+| Terraform        | Infrastructure as code solution for building environments | TBD |
+| Longhorn            | Kuberenetes solution for deploying persistant addressable storage on to Kubernetes. We will be using this to deploy or data lake.       | TBD  |
 | Kafka            | Kafka environment is for message brokering. This should be used when building a streaming messaging platform       | TBD  |
 | Spark            | Spark environment is for processing batch or streaming data. This environment will include a spark master and spark workers. It should also include a notebook system that is connected to it as well | TBD|
-| Jenkins          | Jenkins environment for automating deployment of environments | TBD |
-| Terraform        | Infrastructure as code solution for building environments | TBD |
 | Airflow | Apache solution for building execution and orchestration pipelines | TBD |
 
 ## How to submit updates or changes
