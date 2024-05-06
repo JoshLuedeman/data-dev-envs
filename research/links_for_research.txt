@@ -3,4 +3,4 @@ https://blog.devgenius.io/building-and-testing-a-modern-data-analytics-suite-loc
 https://medium.com/@larry311012/building-and-testing-a-modern-data-analytics-suite-locally-with-kubernetes-before-launching-to-793ba4d46917
 https://medium.com/strai/building-a-data-science-workbench-on-kubernetes-part-1-cee26ba92cb1
 https://developer.hashicorp.com/terraform/tutorials/docker-get-started
-
+https://dev.to/digitalocean/how-to-set-up-a-prometheus-grafana-and-alertmanager-monitoring-stack-on-digitalocean-kubernetes-268j
