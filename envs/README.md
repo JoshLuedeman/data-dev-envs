@@ -1,7 +1,8 @@
 # Environments
-As a developer, the ability to spin up environments for them to do their work, in a timely manner is directly related to the ability to get work done quickly. These folders contain the bash scripts to deploy working dev environments on Minikube(Kubernetes) for different scenarios.
+As a developer, the ability to spin up environments for them to do their work in a timely manner, is directly related to the ability to get work done quickly. These folders contain the bash scripts to deploy working dev environments. These environments are designed to be deployed on a local Minikube Kubernetes environment.
 
 ## How to use
+The ``_base`` folder houses local scripts to deploy a Kubernetes and the required tools on the local machine. Once the base environment is setup, each of the other folders can be run individually to setup the tools required for local development.
 Each environment will have a folder to itself. Every environment will have a README file to describe its services, use case, and a short how-to explaining the process to deploy it. Each folder will have Kubernetes CRD's and Docker container files to create the needed services in the environment. 
 
 ## Table of Contents
