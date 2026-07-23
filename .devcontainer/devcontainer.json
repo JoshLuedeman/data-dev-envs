@@ -1,0 +1,23 @@
+{
+  "name": "data-dev-envs",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+      "minikube": "none"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup-hve-core.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "timonwong.shellcheck",
+        "github.copilot",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
