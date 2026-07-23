@@ -1,0 +1,54 @@
+# .github/workflows/copilot-setup-steps.yml
+# GitHub Copilot cloud-sandbox setup — installs hve-core-all plugin.
+# Job name must be exactly "copilot-setup-steps" for Copilot to recognise it.
+name: Copilot Setup Steps
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+  pull_request:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+
+permissions:
+  contents: read
+
+jobs:
+  copilot-setup-steps:
+    name: Copilot Setup Steps
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '20'
+
+      - name: Install project dependencies
+        run: |
+          # This repo uses shell scripts + docker-compose; no package install needed.
+          echo "No package manager dependencies to install."
+          shellcheck --version || echo "::notice::shellcheck not available"
+        continue-on-error: true
+
+      - name: Install hve-core-all plugin
+        run: bash .devcontainer/setup-hve-core.sh
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Verify tools
+        run: |
+          echo "=== Node ===" && node --version
+          echo "=== npm  ===" && npm --version
+          echo "=== copilot ===" && (copilot --version 2>/dev/null || echo "copilot CLI not in PATH")
+          echo "=== shellcheck ===" && (shellcheck --version | head -2 || echo "shellcheck not found")
